@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and registre page</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-lg-4 bg-white m-auto rounded-top wrapper">
+          <h2 class="text-center pt-3">sign up now</h2>
+          <p class="text-center text-muted lead mb-4">free registration</p>
+          <!-- Form starts here -->
+          <form action="#">
+            <div class="input-group mb-2">
+              <span class="input-group-text"><i class="fa fa-user"></i></span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="First Name"
+              />
+            </div>
+            <form action="#">
+              <div class="input-group mb-2">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Last Name"
+                />
+              </div>
+
+              <form action="#">
+                <div class="input-group mb-2">
+                  <span class="input-group-text"
+                    ><i class="fa fa-envelope"></i
+                  ></span>
+                  <input type="text" class="form-control" placeholder="Email" />
+                </div>
+
+                <div class="input-group mb-2">
+                  <span class="input-group-text"
+                    ><i class="fa fa-lock"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="d-grid">
+                  <!--HER ER KNAPPEN TIL Å VIDEREFØRE ETTER REGISTRERING-->
+                  <button type="button" class="btn btn-success">Sign up</button>
+                  <p class="text-center text-muted">
+                    When you register by clicking sing up button, you agree to
+                    my <a href="#">Terms and condiotions</a> and
+                    <a href="#">Privacy policy</a>
+                  </p>
+                  <p class="text-center">
+                    Already have an account?
+                    <a href="/login.html">Login here</a>
+                  </p>
+                </div>
+              </form>
+
+              <!-- Form ends here-->
+            </form>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

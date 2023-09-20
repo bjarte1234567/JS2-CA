@@ -1,10 +1,18 @@
 //include any default variables overrides here
 // for example primaries and secondaries
 //
-$primary: red;
+$primary: rgb(0, 126, 252);
+$secondary: rgb(221, 248, 221);
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 //add additional custom code here
 // For example this:
-// body {
-// padding: 5rem;
-//   }
+ // Bruk primærfargen på body taggen
+body {
+    background-color: $secondary;
+    opacity: 50%;
+  }
+
+  .wrapper a{
+    text-decoration: none;
+  }
+  
