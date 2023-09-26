@@ -46,7 +46,29 @@ registerUser(registerUrl, userToRegister);
  * @param {string} url
  * @param {Object} userData
  */
-
+async function loginUser(url, userData) {
+  try {
+    const postData = {
+      method: "POST",
+      headers: {
+        "Content-TYPE": "application/json",
+      },
+      body: JSON.stringify(userData),
+    };
+    const response = await fetch(url, postData);
+    console.log(response);
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.log(error);
+  }
+}
+const userToLogin = {
+  email: "bjarteeoliversenloken@noroff.no",
+  password: "oWiiHoo17h543gggg",
+};
+const loginUrl = `${API_BASE_URL}/social/auth/login`;
+loginUser(loginUrl, userToLogin);
 
 //Get token
 
