@@ -1,30 +1,60 @@
-// Hent elementet der vi skal vise API-responsen
-const apiResponseElement = document.getElementById("apiResponse");
+// posts.js
 
-// URL til API-en
-const apiUrl = "https://api.noroff.dev/api/v1/social/posts";
+const API_BASE_URL = "https://api.noroff.dev/api/v1";
+const postsUrl = `${API_BASE_URL}/social/posts`;
 
-// Gjør en GET-request til API-en
-fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-        // Behandle responsen her
-        const posts = data; // Dette antar at responsen er en liste av innlegg
+const accessToken =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTg4LCJuYW1lIjoiU3Zlbl9tYW5uZW5nIiwiZW1haWwiOiJiamFydGVlb2xpdmVyc2VubG9rZW5Abm9yb2ZmLm5vIiwiYXZhdGFyIjoiIiwiYmFubmVyIjoiIiwiaWF0IjoxNjk1NzQ1OTgzfQ.rax294g9uS07X3rN0sn2kl6hTi5f3toPabTsGL_gsSQ";
 
-        // Opprett HTML-markup for å vise innleggene (tilpass dette etter dine behov)
-        const postsHtml = posts.map(post => `
-            <div class="post">
-                <h2>${post.title}</h2>
-                <p>${post.body}</p>
-                <img src="${post.media}" alt="Post Image">
-            </div>
-        `).join("");
+function fetchAndDisplayPosts() {
+  const fetchOptions = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+  };
 
-        // Sett HTML-markupen inn i elementet
-        apiResponseElement.innerHTML = postsHtml;
+  fetch(postsUrl, fetchOptions)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
     })
-    .catch(error => {
-        // Håndter feil her hvis det oppstår en feil med GET-requesten
-        console.error("Error fetching data:", error);
-        apiResponseElement.innerHTML = "Det oppstod en feil ved henting av data.";
+    .then((posts) => {
+      console.log("Posts:", posts);
+
+      displayPosts(posts);
+    })
+    .catch((error) => {
+      console.error("Error fetching posts:", error);
     });
+}
+
+function displayPosts(posts) {
+  const postsContainer = document.getElementById("posts-container");
+
+  posts.forEach((post) => {
+    const postElement = document.createElement("div");
+    postElement.classList.add("post");
+
+    const titleElement = document.createElement("h2");
+    titleElement.textContent = post.title;
+
+    const bodyElement = document.createElement("p");
+    bodyElement.textContent = post.body;
+    
+    const mediaElement = document.createElement("img");
+    mediaElement.setAttribute("src", post.media);
+
+postElement.append(mediaElement);
+    postElement.append(titleElement);
+    postElement.append(bodyElement);
+
+    postsContainer.append(postElement);
+  });
+}
+
+fetchAndDisplayPosts();
+

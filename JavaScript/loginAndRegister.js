@@ -1,3 +1,6 @@
+
+
+
 const API_BASE_URL = "https://api.noroff.dev/api/v1";
 
 /**
@@ -8,6 +11,7 @@ const API_BASE_URL = "https://api.noroff.dev/api/v1";
  * registerUser(registerUrl, userToRegister);
  * ```
  */
+//REGISTER
 async function registerUser(url, userData) {
   try {
     const postData = {
@@ -26,7 +30,6 @@ async function registerUser(url, userData) {
   }
 }
 
-//USER INFO
 const userToRegister = {
   name: "Sven_manneng",
   email: "bjarteeoliversenloken@noroff.no",
@@ -56,7 +59,7 @@ async function loginUser(url, userData) {
       body: JSON.stringify(userData),
     };
     const response = await fetch(url, postData);
-    console.log(response);
+
     const json = await response.json();
     console.log(json);
   } catch (error) {
@@ -91,6 +94,7 @@ async function getAccessToken(url) {
     };
     const response = await fetch(url, fetchOptions);
     const data = await response.json();
+
     return data;
   } catch (error) {
     console.error("Could not get accesstoken:", error);
