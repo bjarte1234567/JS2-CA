@@ -30,7 +30,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: rgb(0, 126, 252);
-  --bs-secondary: rgb(221, 248, 221);
+  --bs-secondary: rgb(191, 211, 191);
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -38,7 +38,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 0, 126, 252;
-  --bs-secondary-rgb: 221, 248, 221;
+  --bs-secondary-rgb: 191, 211, 191;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -46,7 +46,7 @@
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-primary-text-emphasis: #003265;
-  --bs-secondary-text-emphasis: #586358;
+  --bs-secondary-text-emphasis: #4c544c;
   --bs-success-text-emphasis: #0a3622;
   --bs-info-text-emphasis: #055160;
   --bs-warning-text-emphasis: #664d03;
@@ -54,7 +54,7 @@
   --bs-light-text-emphasis: #495057;
   --bs-dark-text-emphasis: #495057;
   --bs-primary-bg-subtle: #cce5fe;
-  --bs-secondary-bg-subtle: #f8fef8;
+  --bs-secondary-bg-subtle: #f2f6f2;
   --bs-success-bg-subtle: #d1e7dd;
   --bs-info-bg-subtle: #cff4fc;
   --bs-warning-bg-subtle: #fff3cd;
@@ -62,7 +62,7 @@
   --bs-light-bg-subtle: #fcfcfd;
   --bs-dark-bg-subtle: #ced4da;
   --bs-primary-border-subtle: #99cbfe;
-  --bs-secondary-border-subtle: #f1fcf1;
+  --bs-secondary-border-subtle: #e5ede5;
   --bs-success-border-subtle: #a3cfbb;
   --bs-info-border-subtle: #9eeaf9;
   --bs-warning-border-subtle: #ffe69c;
@@ -142,7 +142,7 @@
   --bs-tertiary-bg: #2b3035;
   --bs-tertiary-bg-rgb: 43, 48, 53;
   --bs-primary-text-emphasis: #66b2fd;
-  --bs-secondary-text-emphasis: #ebfbeb;
+  --bs-secondary-text-emphasis: #d9e5d9;
   --bs-success-text-emphasis: #75b798;
   --bs-info-text-emphasis: #6edff6;
   --bs-warning-text-emphasis: #ffda6a;
@@ -150,7 +150,7 @@
   --bs-light-text-emphasis: #f8f9fa;
   --bs-dark-text-emphasis: #dee2e6;
   --bs-primary-bg-subtle: #001932;
-  --bs-secondary-bg-subtle: #2c322c;
+  --bs-secondary-bg-subtle: #262a26;
   --bs-success-bg-subtle: #051b11;
   --bs-info-bg-subtle: #032830;
   --bs-warning-bg-subtle: #332701;
@@ -158,7 +158,7 @@
   --bs-light-bg-subtle: #343a40;
   --bs-dark-bg-subtle: #1a1d20;
   --bs-primary-border-subtle: #004c97;
-  --bs-secondary-border-subtle: #859585;
+  --bs-secondary-border-subtle: #737f73;
   --bs-success-border-subtle: #0f5132;
   --bs-info-border-subtle: #087990;
   --bs-warning-border-subtle: #997404;
@@ -1946,13 +1946,13 @@ progress {
 
 .table-secondary {
   --bs-table-color: #000;
-  --bs-table-bg: #f8fef8;
-  --bs-table-border-color: #c6cbc6;
-  --bs-table-striped-bg: #ecf1ec;
+  --bs-table-bg: #f2f6f2;
+  --bs-table-border-color: #c2c5c2;
+  --bs-table-striped-bg: #e6eae6;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #dfe5df;
+  --bs-table-active-bg: #daddda;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #e5ebe5;
+  --bs-table-hover-bg: #e0e4e0;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -3025,19 +3025,19 @@ textarea.form-control-lg {
 
 .btn-secondary {
   --bs-btn-color: #000;
-  --bs-btn-bg: rgb(221, 248, 221);
-  --bs-btn-border-color: rgb(221, 248, 221);
+  --bs-btn-bg: rgb(191, 211, 191);
+  --bs-btn-border-color: rgb(191, 211, 191);
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #e2f9e2;
-  --bs-btn-hover-border-color: #e0f9e0;
-  --bs-btn-focus-shadow-rgb: 188, 211, 188;
+  --bs-btn-hover-bg: #c9dac9;
+  --bs-btn-hover-border-color: #c5d7c5;
+  --bs-btn-focus-shadow-rgb: 162, 179, 162;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #e4f9e4;
-  --bs-btn-active-border-color: #e0f9e0;
+  --bs-btn-active-bg: #ccdccc;
+  --bs-btn-active-border-color: #c5d7c5;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: rgb(221, 248, 221);
-  --bs-btn-disabled-border-color: rgb(221, 248, 221);
+  --bs-btn-disabled-bg: rgb(191, 211, 191);
+  --bs-btn-disabled-border-color: rgb(191, 211, 191);
 }
 
 .btn-success {
@@ -3160,19 +3160,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  --bs-btn-color: rgb(221, 248, 221);
-  --bs-btn-border-color: rgb(221, 248, 221);
+  --bs-btn-color: rgb(191, 211, 191);
+  --bs-btn-border-color: rgb(191, 211, 191);
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(221, 248, 221);
-  --bs-btn-hover-border-color: rgb(221, 248, 221);
-  --bs-btn-focus-shadow-rgb: 221, 248, 221;
+  --bs-btn-hover-bg: rgb(191, 211, 191);
+  --bs-btn-hover-border-color: rgb(191, 211, 191);
+  --bs-btn-focus-shadow-rgb: 191, 211, 191;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(221, 248, 221);
-  --bs-btn-active-border-color: rgb(221, 248, 221);
+  --bs-btn-active-bg: rgb(191, 211, 191);
+  --bs-btn-active-border-color: rgb(191, 211, 191);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: rgb(221, 248, 221);
+  --bs-btn-disabled-color: rgb(191, 211, 191);
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: rgb(221, 248, 221);
+  --bs-btn-disabled-border-color: rgb(191, 211, 191);
   --bs-gradient: none;
 }
 
@@ -6860,8 +6860,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: RGBA(228, 249, 228, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(228, 249, 228, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(204, 220, 204, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(204, 220, 204, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-success {
@@ -11977,10 +11977,41 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: rgb(221, 248, 221);
-  opacity: 50%;
+  background-color: rgb(191, 211, 191);
 }
 
 .wrapper a {
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.nav-item.active a.nav-link:hover {
+  text-decoration: underline;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.post img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.post img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.liked {
+  color: red;
+}
