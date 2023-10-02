@@ -1,0 +1,25 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* API POSTS */
+.post {
+  min-width: 50rem;
+  max-width: 50rem;
+  background-color: rgb(212, 209, 209);
+  border-radius: 5px;
+  margin: 3rem;
+}
+
+#posts-container,
+h1 {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.follow-us-button{
+  color: black;
+  text-decoration: none;
+}

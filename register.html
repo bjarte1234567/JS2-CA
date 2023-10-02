@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login and registre page</title>
-  <script src="/JavaScript/loginAndRegister.js"></script>
+    <title>Login and register</title>
+    <script src="/JavaScript/loginAndRegister.js"></script>
+    <script src="/JavaScript/validationRegister.js"></script>
+
     <link rel="stylesheet" href="/src/style.css" />
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -28,7 +30,8 @@
               <input
                 type="text"
                 class="form-control"
-                placeholder="First Name"
+                placeholder="First Name (Optional)"
+                id="firstNameInput"
               />
             </div>
             <form action="#">
@@ -37,16 +40,24 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Last Name"
+                  placeholder="Last Name (Optional)"
+                  id="lastNameInput"
                 />
               </div>
 
               <form action="#">
+              
                 <div class="input-group mb-2">
                   <span class="input-group-text"
                     ><i class="fa fa-envelope"></i
                   ></span>
-                  <input type="text" class="form-control" placeholder="Email" />
+                  <input
+                    id="emailInput"
+                    type="text"
+                    class="form-control"
+                    placeholder="Email (Required)"
+                  />
+                  <div id="emailValidation" class="validation-feedback"></div>
                 </div>
 
                 <div class="input-group mb-2">
@@ -54,18 +65,30 @@
                     ><i class="fa fa-lock"></i
                   ></span>
                   <input
-                    type="text"
+                    id="passwordInput"
+                    type="password"
                     class="form-control"
-                    placeholder="Password"
+                    placeholder="Password (Required)"
                   />
+                  <div
+                    id="passwordValidation"
+                    class="validation-feedback"
+                  ></div>
                 </div>
+
                 <div class="d-grid">
-                  <!--HER ER KNAPPEN TIL Å VIDEREFØRE ETTER REGISTRERING-->
-                  <button type="button" class="btn btn-success">Sign up</button>
+                  <button
+                    id="signUpButton"
+                    type="button"
+                    class="btn btn-success"
+                  >
+                    Sign up
+                  </button>
+                 
                   <p class="text-center text-muted">
-                    When you register by clicking sing up button, you agree to
-                    my <a href="#">Terms and condiotions</a> and
-                    <a href="#">Privacy policy</a>
+                    When you register by clicking the Sign up button, you agree
+                    to my <a href="#">Terms and Conditions</a> and
+                    <a href="#">Privacy Policy</a>.
                   </p>
                   <p class="text-center">
                     Already have an account?
