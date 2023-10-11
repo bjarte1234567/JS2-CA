@@ -1,23 +1,21 @@
-const API_BASEe_URL = "https://api.noroff.dev/api/v1";
-const accessTokenn =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTg4LCJuYW1lIjoiU3Zlbl9tYW5uZW5nIiwiZW1haWwiOiJiamFydGVlb2xpdmVyc2VubG9rZW5Abm9yb2ZmLm5vIiwiYXZhdGFyIjoiIiwiYmFubmVyIjoiIiwiaWF0IjoxNjk1NzQ1OTgzfQ.rax294g9uS07X3rN0sn2kl6hTi5f3toPabTsGL_gsSQ";
+const API_BASEee_URL = "https://api.noroff.dev/api/v1";
+const accessTokenn = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTg4LCJuYW1lIjoiU3Zlbl9tYW5uZW5nIiwiZW1haWwiOiJiamFydGVlb2xpdmVyc2VubG9rZW5Abm9yb2ZmLm5vIiwiYXZhdGFyIjoiIiwiYmFubmVyIjoiIiwiaWF0IjoxNjk1NzQ1OTgzfQ.rax294g9uS07X3rN0sn2kl6hTi5f3toPabTsGL_gsSQ";
+// Erstatt med din faktiske tilgangstoken
 
-const createPostUrl = `${API_BASE_URL}/social/posts`;
+const newPostData = {
+  title: "",
+  body: "",
+  tags: ["", ""], 
+  media: "", 
+};
 
-//CREATE POST HERE BY FILLING OUT.
-
-// const newPostData = {
-//   title: "oink",
-//   body: "oink",
-//   tags: ["tag1", "tag1"], // Optional, you can specify tags
-//   media: "https://unsplash.com/photos/Wpg3Qm0zaGk", // Optional, if your post includes an image
-// };
+const createPostUrl = `${API_BASEee_URL}/social/posts`;
 
 const createPostOptions = {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${accessToken}`,
+    Authorization: `Bearer ${accessTokenn}`,
   },
   body: JSON.stringify(newPostData),
 };
