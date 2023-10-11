@@ -1,11 +1,8 @@
-
 const API_BASE_URL = "https://api.noroff.dev/api/v1";
 const postsUrl = `${API_BASE_URL}/social/posts`;
 
 const accessToken =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTg4LCJuYW1lIjoiU3Zlbl9tYW5uZW5nIiwiZW1haWwiOiJiamFydGVlb2xpdmVyc2VubG9rZW5Abm9yb2ZmLm5vIiwiYXZhdGFyIjoiIiwiYmFubmVyIjoiIiwiaWF0IjoxNjk1NzQ1OTgzfQ.rax294g9uS07X3rN0sn2kl6hTi5f3toPabTsGL_gsSQ";
-
-
 
 function fetchAndDisplayPosts() {
   const fetchOptions = {
@@ -38,31 +35,50 @@ function displayPosts(posts) {
 
   posts.forEach((post) => {
     if (post.media) {
-      const postElement = document.createElement("div");
+      const card = document.createElement("div");
+      card.classList.add("card", "mb-5");
+
       const cardBody = document.createElement("div");
-      
+      cardBody.classList.add("card-body");
+
       const titleElement = document.createElement("h2");
-      
+      titleElement.classList.add("card-title");
       titleElement.textContent = post.title;
-      postElement.classList.add("post");
 
       const bodyElement = document.createElement("p");
-
+      bodyElement.classList.add("card-text");
       bodyElement.textContent = post.body;
 
       const mediaElement = document.createElement("img");
-
+      mediaElement.classList.add("card-img-top");
       mediaElement.setAttribute("src", post.media);
 
-      postElement.append(mediaElement);
+      const likeButton = document.createElement("button");
+      likeButton.classList.add("btn", "btn-primary", "mb-2"); // Legg til btn-klassen for knappeutseende
+      likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i> Like';
+
+      let isLiked = false;
+      likeButton.addEventListener("click", function () {
+        if (isLiked) {
+          likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i> Like';
+          likeButton.classList.remove("btn-danger");
+          isLiked = false;
+        } else {
+          likeButton.innerHTML = '<i class="fas fa-heart"></i> Liked';
+          likeButton.classList.add("btn-danger");
+          isLiked = true;
+        }
+      });
+
       cardBody.append(titleElement);
       cardBody.append(bodyElement);
+      cardBody.append(likeButton);
 
-      postElement.append(cardBody);
-      postsContainer.append(postElement);
+      card.append(mediaElement);
+      card.append(cardBody);
+      postsContainer.append(card);
     }
   });
 }
 
 fetchAndDisplayPosts();
-

@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login and register page</title>
     <script src="/JavaScript/loginAndRegister.js"></script>
+    <script src="/JavaScript/validationLogin.js"></script>
     <link rel="stylesheet" href="/src/style.css" />
-   
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -30,20 +31,26 @@
               <input
                 type="text"
                 class="form-control"
+                id="emailInput"
                 placeholder="Enter your email"
               />
+             
             </div>
-
+            <p class="text-danger" id="emailErrorMessage"></p>
+            
             <div class="input-group mb-2 py-2">
               <span class="input-group-text"
                 ><i class="fa-solid fa-lock"></i
               ></span>
+
               <input
-                type="text"
+                type="password"
                 class="form-control"
+                id="passwordInput"
                 placeholder="Enter your password"
               />
             </div>
+            <p class="text-danger" id="passwordErrorMessage"></p>
             <div class="d-grid">
               <button type="button" class="btn btn-success py-2">Log in</button>
               <p class="text-center text-muted"></p>
@@ -53,11 +60,12 @@
               </p>
             </div>
           </form>
+          <p class="text-danger" id="emailErrorMessage"></p>
 
+          
           <!-- Form ends here-->
         </div>
       </div>
     </div>
   </body>
-  
 </html>

@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posts page</title>
-    <script src="JavaScript/posts.js" defer></script>
-    <script src="/JavaScript/filter.js" defer></script>
+    <script src="/JavaScript/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="stylesheet" href="/src/mystyle.css" />
@@ -41,7 +40,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link text-uppercase" aria-current="page" href="/posts.html"
+              <a
+                class="nav-link text-uppercase"
+                aria-current="page"
+                href="/posts.html"
                 >Home</a
               >
             </li>
@@ -50,7 +52,7 @@
                 ><u>Profile</u></a
               >
             </li>
-    
+
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle text-uppercase"
@@ -63,17 +65,23 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="/allPosts.html/newestPosts.html"
+                  <a
+                    class="dropdown-item"
+                    href="/allPosts.html/newestPosts.html"
                     >Newest posts</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/allPosts.html/oldestPosts.html"
+                  <a
+                    class="dropdown-item"
+                    href="/allPosts.html/oldestPosts.html"
                     >Oldest posts</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/allPosts.html/allPosts.html">All posts</a>
+                  <a class="dropdown-item" href="/allPosts.html/allPosts.html"
+                    >All posts</a
+                  >
                 </li>
               </ul>
             </li>
@@ -81,8 +89,29 @@
         </div>
       </div>
     </nav>
-    
+
     <h1>Profile</h1>
+    <div class="container">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Profilimage"
+        class="img-fluid rounded-circle"
+      />
+
+      <div class="mb-5 mt-5">
+        <h3>About me</h3>
+        <p><strong>Name:</strong> Bjarte hansen bjorg</p>
+        <p><strong>Email:</strong> bjarteeoliversenloken@noroff.no</p>
+        <p><strong>Adress:</strong> 1223 Barong Street, City</p>
+        <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+      </div>
+    </div>
+    <!----->
+    <div class="center-meg">
+      <h3>Your posts</h3>
+      <div id="user-posts"></div>
+    </div>
+
     <!-----FOOTER---->
     <footer class="bg-light text-dark py-4">
       <div class="container">
@@ -95,9 +124,21 @@
           </div>
           <div class="col-md-6">
             <h4>Follow us</h4>
-            <p><a class="follow-us-button" href="https://www.instagram.com/">Instagram</a></p>
-            <p><a class="follow-us-button" href="https://www.tiktok.com/en/">TikTok</a></p>
-            <p><a class="follow-us-button" href="https://www.snapchat.com/">Snapchat</a></p>
+            <p>
+              <a class="follow-us-button" href="https://www.instagram.com/"
+                >Instagram</a
+              >
+            </p>
+            <p>
+              <a class="follow-us-button" href="https://www.tiktok.com/en/"
+                >TikTok</a
+              >
+            </p>
+            <p>
+              <a class="follow-us-button" href="https://www.snapchat.com/"
+                >Snapchat</a
+              >
+            </p>
             <!-- Legg til ikoner og lenker til sosiale medier her -->
           </div>
         </div>
