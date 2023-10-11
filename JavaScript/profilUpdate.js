@@ -1,14 +1,21 @@
 const API_BASE_URL = "https://api.noroff.dev/api/v1";
 const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTg4LCJuYW1lIjoiU3Zlbl9tYW5uZW5nIiwiZW1haWwiOiJiamFydGVlb2xpdmVyc2VubG9rZW5Abm9yb2ZmLm5vIiwiYXZhdGFyIjoiIiwiYmFubmVyIjoiIiwiaWF0IjoxNjk1NzQ1OTgzfQ.rax294g9uS07X3rN0sn2kl6hTi5f3toPabTsGL_gsSQ";
 
+const authorName = "Sven_manneng";
 
-const authorName = "Sven_manneng"; // Erstatt med ditt brukernavn
+const newPostData = {
+  title: "ttttest",
+  body: "tttest",
+  tags: ["gag2", "gag1"],
+  media: "https://unsplash.com/photos/a-man-holding-a-baby-in-front-of-a-garage-door-1RqdfT0Oyqk",
+};
+
+// Oppdatering av medieinformasjon
 const updateMediaUrl = `${API_BASE_URL}/social/profiles/${authorName}/media`;
 
-
 const mediaData = {
-  banner: "https://images.unsplash.com/photo-1682687982185-531d09ec56fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-  avatar: "https://images.unsplash.com/photo-1682687982185-531d09ec56fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+  banner: "https://unsplash.com/photos/a-large-body-of-water-surrounded-by-mountains-Dm-QfGMqNg4",
+  avatar: "https://unsplash.com/photos/a-large-body-of-water-surrounded-by-mountains-Dm-QfGMqNg4",
 };
 
 const mediaUpdateOptions = {
@@ -29,8 +36,15 @@ fetch(updateMediaUrl, mediaUpdateOptions)
   })
   .then((updatedProfile) => {
     console.log("Updated profile with new media:", updatedProfile);
+
     // Du kan oppdatere brukerens profilvisning med de nye bildene her hvis det er nødvendig
+    const bannerImg = document.getElementById("banner");
+    const avatarImg = document.getElementById("avatar");
+
+    bannerImg.src = updatedProfile.banner;
+    avatarImg.src = updatedProfile.avatar;
   })
   .catch((error) => {
     console.error("Error updating profile media:", error);
   });
+
