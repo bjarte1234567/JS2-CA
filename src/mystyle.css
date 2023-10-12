@@ -2,6 +2,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+h4{
+  display: flex;
+  justify-content: center;
+}
+
 /* API POSTS */
 .post {
   min-width: 50rem;
@@ -21,10 +26,10 @@ h1 {
 }
 
 .card-img-top, .card-body{
-  max-width: 35rem;
-  max-height: 35rem;
-  width: 35rem;
+  max-width: 30rem;
+  max-height: 30rem;
+  width: 30rem;
 }
 
-/* Profile page */
+
 

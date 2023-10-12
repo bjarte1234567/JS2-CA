@@ -14,8 +14,8 @@ const newPostData = {
 const updateMediaUrl = `${API_BASE_URL}/social/profiles/${authorName}/media`;
 
 const mediaData = {
-  banner: "https://unsplash.com/photos/a-large-body-of-water-surrounded-by-mountains-Dm-QfGMqNg4",
-  avatar: "https://unsplash.com/photos/a-large-body-of-water-surrounded-by-mountains-Dm-QfGMqNg4",
+  banner: "https://unsplash.com/photos/V7SKRhXskv8",
+  avatar: "https://unsplash.com/photos/V7SKRhXskv8",
 };
 
 const mediaUpdateOptions = {
