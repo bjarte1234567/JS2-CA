@@ -1,10 +1,32 @@
+/**
+ * Constant defining the base URL of the API.
+ * @type {string}
+ */
 const API_BASE_URL = "https://api.noroff.dev/api/v1";
+
+/**
+ * User's access token for API authentication.
+ * @type {string}
+ */
 const accessToken =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTg4LCJuYW1lIjoiU3Zlbl9tYW5uZW5nIiwiZW1haWwiOiJiamFydGVlb2xpdmVyc2VubG9rZW5Abm9yb2ZmLm5vIiwiYXZhdGFyIjoiIiwiYmFubmVyIjoiIiwiaWF0IjoxNjk1NzQ1OTgzfQ.rax294g9uS07X3rN0sn2kl6hTi5f3toPabTsGL_gsSQ";
 
+/**
+ * User's ID.
+ * @type {string}
+ */
 const authorId = "3925";
 
+/**
+ * URL to fetch the user's posts from the API.
+ * @type {string}
+ */
 const postsUrl = `${API_BASE_URL}/social/posts?_author=3925`;
+
+/**
+ * Fetch API options to get the user's posts.
+ * @type {Object}
+ */
 
 const fetchOptions = {
   method: "GET",
@@ -14,7 +36,6 @@ const fetchOptions = {
   },
 };
 
-//
 fetch(postsUrl, fetchOptions)
   .then((response) => {
     if (!response.ok) {
@@ -29,14 +50,12 @@ fetch(postsUrl, fetchOptions)
 
     posts.forEach((post) => {
       if (post.title || post.body) {
-        // Sjekk om posten har både tittel og kropp
         const postElement = document.createElement("div");
         postElement.classList.add("post");
 
-if (post.media) {
-          // Legg til bilde (media) hvis det er tilgjengelig i posten
+        if (post.media) {
           const mediaElement = document.createElement("img");
-          mediaElement.src = post.media; // Bruk URL-en til postens media
+          mediaElement.src = post.media;
           postElement.appendChild(mediaElement);
         }
 

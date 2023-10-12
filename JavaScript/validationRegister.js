@@ -1,3 +1,8 @@
+/**
+ * A function to handle user sign-up form validation and display validation messages.
+ * @param {Event} event - The event object for the "DOMContentLoaded" event.
+ */
+
 document.addEventListener("DOMContentLoaded", function () {
   const emailInput = document.getElementById("emailInput");
   const passwordInput = document.getElementById("passwordInput");

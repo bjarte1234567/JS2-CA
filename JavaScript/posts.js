@@ -1,3 +1,20 @@
+/**
+ * constant defining the base URL of the API
+ * @type {string}
+ */
+/**
+ *access token from the API
+ *@type {string}
+ */
+/**
+ * fetches and displays posts from the API (fetchAndDisplaysPosts)
+ */
+
+/**
+ * displays posts in the html container
+ * @param {object[]} posts - An array of posts to display
+ */
+
 const API_BASE_URL = "https://api.noroff.dev/api/v1";
 const postsUrl = `${API_BASE_URL}/social/posts`;
 
