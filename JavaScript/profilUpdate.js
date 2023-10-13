@@ -26,7 +26,7 @@ const newPostData = {
   body: "tttest",
   tags: ["gag2", "gag1"],
   media:
-    "https://unsplash.com/photos/a-man-holding-a-baby-in-front-of-a-garage-door-1RqdfT0Oyqk",
+    "",
 };
 
 /**
@@ -40,9 +40,7 @@ const updateMediaUrl = `${API_BASE_URL}/social/profiles/${authorName}/media`;
  * @type {Object}
  */
 const mediaData = {
-  banner: "https://unsplash.com/photos/V7SKRhXskv8",
-  avatar: "https://unsplash.com/photos/V7SKRhXskv8",
-};
+  banner: "https://images.unsplash.com/photo-1590845947670-c009801ffa74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmFubmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" avatar: ""};
 
 /**
  * Options for updating user media using the Fetch API.
