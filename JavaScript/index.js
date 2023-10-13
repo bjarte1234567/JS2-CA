@@ -1,25 +1,35 @@
 /**
- * Constant defining the base URL of the API.
+ * Base URL for the API.
  * @type {string}
  */
-const API_BASE_URLee = "https://api.noroff.dev/api/v1";
-
-/**
+ /**
+ * URL for fetching user's posts from the API.
+ * @type {string}
+ */
+ /**
  * User's access token for API authentication.
  * @type {string}
  */
+ /**
+ * The maximum number of posts to display.
+ * @type {number}
+ */
+ /**
+ * Fetches and displays user posts from the API.
+ */
+ /**
+ * Displays posts in the HTML container.
+ * @param {Object[]} posts - An array of post objects to display.
+ */
+
+const API_BASE_URLee = "https://api.noroff.dev/api/v1";
+const postsUrl = `${API_BASE_URLee}/social/posts`;
+
 const accessTokenee =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NTg4LCJuYW1lIjoiU3Zlbl9tYW5uZW5nIiwiZW1haWwiOiJiamFydGVlb2xpdmVyc2VubG9rZW5Abm9yb2ZmLm5vIiwiYXZhdGFyIjoiIiwiYmFubmVyIjoiIiwiaWF0IjoxNjk1NzQ1OTgzfQ.rax294g9uS07X3rN0sn2kl6hTi5f3toPabTsGL_gsSQ";
 
-/**
- * Maximum number of posts to display.
- * @type {number}
- */
 const maxPostsToShow = 5;
 
-/**
- * Fetches and displays posts from the API.
- */
 function fetchAndDisplayPosts() {
   const fetchOptions = {
     method: "GET",
@@ -46,10 +56,6 @@ function fetchAndDisplayPosts() {
     });
 }
 
-/**
- * Displays posts in the HTML container.
- * @param {Object[]} posts - An array of post objects to display.
- */
 function displayPosts(posts) {
   const postsContainer = document.getElementById("posts-container");
   const displayedPosts = [];
