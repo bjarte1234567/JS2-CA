@@ -1,16 +1,6 @@
-//include any default variables overrides here
-// for example primaries and secondaries
-//
 $primary: rgb(0, 126, 252);
-$secondary: rgb(191, 211, 191);
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-//add additional custom code here
-// For example this:
-// Bruk primærfargen på body taggen
-body {
-  background-color: $secondary;
-}
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 .wrapper a {
   text-decoration: none;

@@ -7,17 +7,21 @@ h4 {
   justify-content: center;
 }
 
+body {
+  background-color: #c2c2c2 !important; 
+  color: #000000 !important; 
+}
+
 /* API POSTS */
 .post {
   min-width: 50rem;
   max-width: 50rem;
-  background-color: rgb(215, 215, 215);
   border-radius: 5px;
   margin: 3rem;
 }
 
-#posts-container,
-h1 {
+#posts-container, h1
+ {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -66,6 +70,6 @@ h1 {
   margin-top: 5rem;
 }
 
-#avatar{
-  width: 10rem;
+.posts-h1{
+  margin-top: 5rem;
 }
