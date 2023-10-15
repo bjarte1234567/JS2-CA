@@ -5,6 +5,5 @@
 This project is about making an social media platform, with a specific API given out by Noroff.
 We are supposed to be able to be posting a post, with a title, image and a text for example.
 
-=======
-# JS2-CA This is my CA
->>>>>>> JS2-PR
+# programing language
+css, bootstrap, HTML and javascript.
